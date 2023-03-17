@@ -11,12 +11,12 @@ int main(void)
 	nl = '\n';
 	cm = ',';
 	sp = ' ';
-	for (num = 48; num <= 57; num++)
+	for (num = 48; num < 57; num++)
 	{
 		putchar(num);
 		putchar(cm);
 		putchar(sp);
 	}
-	putchar(nl);
+	putchar(57);
 	return (0);
 }
