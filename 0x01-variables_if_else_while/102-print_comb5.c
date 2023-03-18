@@ -6,11 +6,8 @@
  */
 int main(void)
 {
-	int n1, n2, cm, nl, sp;
+	int n1, n2;
 
-	sp = ' ';
-	cm = ',';
-	nl = '\n';
 	for (n1 = 0; n1 < 100; n1++)
 	{
 		for (n2 = 0; n2 < 100; n2++)
@@ -19,17 +16,17 @@ int main(void)
 			{
 				putchar((n1 / 10) + '0');
 				putchar((n1 % 10) + '0');
-				putchar(sp);
+				putchar(' ');
 				putchar((n2 / 10) + '0');
 				putchar((n2 % 10) + '0');
 				if (n1 != 98 || n2 != 99)
 				{
-					putchar(cm);
-					putchar(sp);
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
-	putchar(nl);
+	putchar('\n');
 	return (0);
 }
