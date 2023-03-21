@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *print_sign - Entry point
- *@n: Sign check
+ *@n: print sign
  *Explain: 'Sign'
  *Return: positive 1.
  *Zero, 0 is returned.
