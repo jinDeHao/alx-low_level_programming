@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 		for (alpha = 97; alpha <= 122; alpha++)
 		{
 			_putchar(alpha);
-			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
