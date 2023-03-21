@@ -16,12 +16,20 @@ void print_to_98(int n)
 			if (a < 0)
 			{
 				_putchar(45);
+				if (de != 0)
+				{
+					_putchar(de + 57);
+				}
+				_putchar(a % 10 + 57);
 			}
-			if (de != 0)
+			else
 			{
-				_putchar(de + 48);
+				if (de != 0)
+				{
+					_putchar(de + 48);
+				}
+				_putchar(a % 10 + 48);
 			}
-			_putchar(a % 10 + 48);
 			if (a != 98)
 			{
 				_putchar(',');
