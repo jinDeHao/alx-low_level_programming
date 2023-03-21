@@ -8,6 +8,8 @@ void print_times_table(int n)
 {
 	int a, b, res;
 
+	if (n < 100)
+	{
 	for (a = 0; a <= n; a++)
 	{
 		for (b = 0; b <= n; b++)
@@ -38,5 +40,6 @@ void print_times_table(int n)
 			}
 		}
 		_putchar('\n');
+	}
 	}
 }
