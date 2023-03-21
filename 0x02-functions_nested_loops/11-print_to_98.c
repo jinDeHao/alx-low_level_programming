@@ -22,8 +22,11 @@ void print_to_98(int n)
 				_putchar(de + 48);
 			}
 			_putchar(a % 10 + 48);
-			_putchar(',');
-			_putchar(' ');
+			if (a != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 	}
 	else if (n > 98)
@@ -35,16 +38,14 @@ void print_to_98(int n)
 			{
 				_putchar(hn + 48);
 			}
-			_putchar(a / 10 + 48);
+			_putchar((a / 10) % 10 + 48);
 			_putchar(a % 10 + 48);
-			_putchar(',');
-			_putchar(' ');
+			if (a != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-	}
-	else
-	{
-		_putchar(n / 10 + 48);
-		_putchar(n % 10 + 48);
 	}
 	_putchar('\n');
 }
