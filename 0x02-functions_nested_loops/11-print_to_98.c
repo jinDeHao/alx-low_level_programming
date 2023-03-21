@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  *print_to_98 - Entry point
@@ -6,54 +7,35 @@
  */
 void print_to_98(int n)
 {
-	int a, de, hn;
+	int a;
 
 	if (n <= 98)
 	{
 		for (a = n; a <= 98; a++)
 		{
-			de = a / 10;
-			if (a < 0)
-			{
-				_putchar(45);
-				if (de != 0)
-				{
-					_putchar(de + 57);
-				}
-				_putchar(a % 10 + 57);
-			}
-			else
-			{
-				if (de != 0)
-				{
-					_putchar(de + 48);
-				}
-				_putchar(a % 10 + 48);
-			}
 			if (a != 98)
 			{
-				_putchar(',');
-				_putchar(' ');
+				printf("%d, ", a);
+			}
+			else if (a == 98)
+			{
+				printf("%d\n", a);
 			}
 		}
 	}
-	else if (n > 98)
+	else if (n >= 98)
 	{
 		for (a = n; a >= 98; a--)
 		{
-			hn = a / 100;
-			if (hn != 0)
-			{
-				_putchar(hn + 48);
-			}
-			_putchar((a / 10) % 10 + 48);
-			_putchar(a % 10 + 48);
 			if (a != 98)
 			{
-				_putchar(',');
-				_putchar(' ');
+				printf("%d, ", a);
+			}
+			else if (a == 98)
+			{
+				printf("%d\n", a);
 			}
 		}
 	}
-	_putchar('\n');
 }
+
