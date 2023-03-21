@@ -43,8 +43,8 @@ void print_to_98(int n)
 	}
 	else
 	{
-		_putchar(a / 10 + 48);
-		_putchar(a % 10 + 48);
+		_putchar(n / 10 + 48);
+		_putchar(n % 10 + 48);
 	}
 	_putchar('\n');
 }
