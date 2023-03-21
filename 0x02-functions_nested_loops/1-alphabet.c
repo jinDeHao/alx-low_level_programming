@@ -3,7 +3,7 @@
  *print_alphabet - Entry point
  *Explain: 'alpha'
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	int alpha;
 
