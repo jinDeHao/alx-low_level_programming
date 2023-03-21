@@ -23,7 +23,7 @@ void print_times_table(int n)
 				_putchar((res / 10) % 10 + 48);
 			}
 			_putchar(res % 10 + 48);
-			if (b != 9)
+			if (b != n)
 			{
 				_putchar(',');
 				_putchar(' ');
