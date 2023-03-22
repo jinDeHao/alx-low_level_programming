@@ -20,4 +20,5 @@ int main(void)
 		b = res;
 	}
 	printf("%lu\n", sum);
+	return (0);
 }
