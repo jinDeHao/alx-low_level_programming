@@ -6,13 +6,17 @@
  */
 int main(void)
 {
-	int sum, i;
+	int i;
+	unsigned long a, b, sum;
 
-	sum = 1;
+	a = 0;
+	b = 1;
 	for (i = 0; i < 50; i++)
 	{
-		printf("%d, ", sum);
-		sum += sum;
+		sum = a + b;
+		printf("%lu, ", sum);
+		a = b;
+		b = sum;
 	}
 	printf("\n");
 	return (0);
