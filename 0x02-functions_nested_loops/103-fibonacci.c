@@ -14,10 +14,13 @@ int main(void)
 	sum = 0;
 	while (res < 4000000)
 	{
-		res = a + b;
-		sum += res;
-		a = b;
-		b = res;
+		if (res % 2 == 0)
+		{
+			res = a + b;
+			sum += res;
+			a = b;
+			b = res;
+		}
 	}
 	printf("%lu\n", sum);
 	return (0);
