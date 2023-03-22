@@ -7,14 +7,23 @@
 int main(void)
 {
 	int i;
-	unsigned long sum, a, b;
+	unsigned long sum, a, b, l;
 
+	l = 1000000000;
 	a = 0;
 	b = 1;
 	for (i = 0; i < 98; i++)
 	{
 		sum = a + b;
-		printf("%lu", sum);
+		if (i < 92)
+		{
+			printf("%lu", sum);
+		}
+		else if (i >= 92)
+		{
+			printf(", %lu", ((b / l) + ((b % l) / l));
+			printf("%lu", (b % l) % l);
+		}
 		a = b;
 		b = sum;
 		if (i != 97)
