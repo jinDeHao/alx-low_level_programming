@@ -21,7 +21,7 @@ int main(void)
 		}
 		else if (i >= 92)
 		{
-			printf(", %lu", ((b / l) + ((b % l) / l));
+			printf(", %lu", ((b / l) + ((b % l) / l)));
 			printf("%lu", (b % l) % l);
 		}
 		a = b;
