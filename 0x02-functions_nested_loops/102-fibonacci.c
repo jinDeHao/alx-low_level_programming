@@ -14,7 +14,11 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		sum = a + b;
-		printf("%lu, ", sum);
+		printf("%lu", sum);
+		if (i != 49)
+		{
+			printf(", ");
+		}
 		a = b;
 		b = sum;
 	}
