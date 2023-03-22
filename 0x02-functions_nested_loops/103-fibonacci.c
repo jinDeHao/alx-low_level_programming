@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-	int i;
 	unsigned long a, b, res, sum;
 
 	a = 0;
