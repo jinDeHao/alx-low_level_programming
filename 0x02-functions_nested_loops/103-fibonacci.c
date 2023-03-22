@@ -20,5 +20,5 @@ int main(void)
 		a = b;
 		b = res;
 	}
-	printf("%d\n", sum);
+	printf("%lu\n", sum);
 }
