@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_triangle - writes the character c to stdout
- * @size: The character to print
+ * @size: The size of triangle
  */
 void print_triangle(int size)
 {
@@ -9,7 +9,7 @@ void print_triangle(int size)
 
 	for (i = 1; i <= size; i++)
 	{
-		for (l = size; l > i; i--)
+		for (l = size; l > i; --i)
 		{
 			_putchar(' ');
 		}
