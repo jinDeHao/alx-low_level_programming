@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long num, i, div;
+	unsigned long num, div;
 
 	num = 612852475143;
 	while (div < (num / 2))
@@ -16,7 +16,7 @@ int main(void)
 		{
 			num /= 2;
 		}
-		for (div = 3; div < num / 2; div += 2)
+		for (div = 3; div < (num / 2); div += 2)
 		{
 			if (num % div == 0)
 			{
