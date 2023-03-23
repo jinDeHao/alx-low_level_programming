@@ -1,8 +1,9 @@
 #include "main.h"
 /**
  * mul - writes the character c to stdout
- * @c: The character to check
- * Return: On success 0.
+ * @a: The character to mul
+ * @b: The character to mul
+ * Return: mltpl.
  */
 int mul(int a, int b)
 {
