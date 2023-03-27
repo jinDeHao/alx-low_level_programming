@@ -10,8 +10,8 @@ void puts_half(char *str)
 	l = 0;
 	while (*str != '\0')
 	{
-		str++;
 		l++;
+		str++;
 	}
 	str -= (l - 1) / 2;
 	for (n = (l - 1) / 2; n < l - 1; n++)
