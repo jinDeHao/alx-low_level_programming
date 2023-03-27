@@ -30,8 +30,10 @@ int _atoi(char *s)
 				t++;
 			}
 			if (num >= 2147483640 && n == 8)
+			{
 				max = 1;
 				num += 7;
+			}
 			else
 				num += n;
 		}
@@ -42,6 +44,8 @@ int _atoi(char *s)
 	}
 	num *= seg;
 	if (max == 1)
-		num -= 1;
+	{
+		num--;
+	}
 	return (num);
 }
