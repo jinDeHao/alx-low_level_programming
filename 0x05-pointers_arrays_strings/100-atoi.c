@@ -21,12 +21,18 @@ int _atoi(char *s)
 		{
 			n = (s[l] - 48);
 			t = l + 1;
+			brk = 0;
 			while (s[t] >= 48 && s[t] <= 57)
 			{
+				brk = 1;
 				n *= 10;
 				t++;
 			}
 			num += n;
+		}
+		if (brk == 0)
+		{
+			break;
 		}
 	}
 	num *= seg;
