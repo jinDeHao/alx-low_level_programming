@@ -43,9 +43,5 @@ int _atoi(char *s)
 		}
 	}
 	num *= seg;
-	if (max == 1)
-	{
-		num--;
-	}
 	return (num);
 }
