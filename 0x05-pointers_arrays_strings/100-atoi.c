@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int num, l, brk, seg, n, t;
+	int num, l, brk, seg, n, t, max = 0;
 
 	num = 0;
 	seg = 1;
@@ -31,6 +31,7 @@ int _atoi(char *s)
 			if (num >= 2147483640 && n == 8)
 			{
 				num += 7;
+				max = 1;
 			}
 			else
 				num += n;
@@ -41,5 +42,8 @@ int _atoi(char *s)
 		}
 	}
 	num *= seg;
+	if (max == 1)
+		num--;
+
 	return (num);
 }
