@@ -5,13 +5,13 @@
  */
 void puts2(char *str)
 {
-	int *ref;
-
-	*ref = str;
-	while (*str != '\0' && str <= ref + 326)
+	while (*str != '\0')
 	{
-		_putchar(*str);
-		str += 2;
+		if (*str % 2 == 0)
+		{
+			_putchar(*str);
+		}
+		str++;
 	}
 	_putchar('\n');
 }
