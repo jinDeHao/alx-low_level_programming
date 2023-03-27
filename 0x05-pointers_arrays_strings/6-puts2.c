@@ -5,7 +5,10 @@
  */
 void puts2(char *str)
 {
-	while (*str != '\0')
+	int ref;
+
+	ref = str;
+	while (*str != '\0' && str <= ref + 326)
 	{
 		_putchar(*str);
 		str += 2;
