@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int num, l, seg, n;
+	int num, l, seg, n, t;
 
 	num = 0;
 	seg = 1;
@@ -15,7 +15,7 @@ int _atoi(char *s)
 	{
 		if (s[l] == 45)
 		{
-			seg *= -1
+			seg *= -1;
 		}
 		if (s[l] >= 48 && s[l] <= 57)
 		{
@@ -30,4 +30,5 @@ int _atoi(char *s)
 		}
 	}
 	num *= seg;
+	return (num);
 }
