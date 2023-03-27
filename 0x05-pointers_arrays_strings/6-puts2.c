@@ -5,9 +5,9 @@
  */
 void puts2(char *str)
 {
-	int ref;
+	int *ref;
 
-	ref = str;
+	*ref = str;
 	while (*str != '\0' && str <= ref + 326)
 	{
 		_putchar(*str);
