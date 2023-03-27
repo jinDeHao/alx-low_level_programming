@@ -16,11 +16,11 @@ void puts_half(char *str)
 	str -= (l - 1) / 2;
 	for (n = (l - 1) / 2; n < l - 1; n++)
 	{
-		if (l - 1 != 0 && n = (l - 1) / 2)
+		if (l - 1 != 0 && n == (l - 1) / 2)
 		{
-			str--
+			str--;
 			_putchar(*str);
-			str++
+			str++;
 		}
 		else
 		{
