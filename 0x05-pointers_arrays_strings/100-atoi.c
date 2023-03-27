@@ -31,7 +31,7 @@ int _atoi(char *s)
 			}
 			if (num >= 2147483640 && n = 8)
 			{
-				max = 1
+				max = 1;
 				num += 7;
 			}
 			num += n;
