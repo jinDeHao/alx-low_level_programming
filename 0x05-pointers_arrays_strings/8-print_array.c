@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _putchar - writes the character c to stdout
+ * print_array - writes the character c to stdout
  * @a: The pointer
  * @n: The variable
  */
