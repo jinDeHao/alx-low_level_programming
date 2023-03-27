@@ -29,12 +29,15 @@ int _atoi(char *s)
 				n *= 10;
 				t++;
 			}
-			if (num >= 2147483640 && n = 8)
+			if (num >= 2147483640 && n == 8)
 			{
 				max = 1;
 				num += 7;
 			}
-			num += n;
+			else
+			{
+				num += n;
+			}
 		}
 		if (brk == 0)
 		{
