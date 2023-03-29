@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _putchar - writes the character c to stdout
+ * string_toupper - writes the character c to stdout
  * @str: The string to change from lowercase to uppercase.
  * Return: str.
  */
