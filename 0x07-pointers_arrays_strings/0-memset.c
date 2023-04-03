@@ -4,7 +4,7 @@
  * @s: pointer
  * @n: first bytes to filled
  * @b: filled by
- * return: s
+ * Return: On success s.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
