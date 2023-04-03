@@ -7,7 +7,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	unsigned int sum1 = 0, sum2 = 0;
+	int sum1 = 0, sum2 = 0;
 	int i = 0;
 
 	while (i < size)
@@ -21,5 +21,5 @@ void print_diagsums(int *a, int size)
 		sum2 += a[i * size + size - i - 1];
 		i--;
 	}
-	printf("%u, %u\n", sum1, sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
