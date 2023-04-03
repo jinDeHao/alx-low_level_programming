@@ -3,8 +3,7 @@
  * _strchr - start from character
  * @s: string
  * @c: character to start from
- * return: NULL if not found
- * return: s
+ * Return: s
  */
 char *_strchr(char *s, char c)
 {
