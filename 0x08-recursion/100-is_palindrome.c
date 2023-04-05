@@ -29,7 +29,7 @@ int omar_palindrome(char *s, int i)
 			return (1);
 		else
 		{
-			return (omar_palindrome(*(s + 1), i - 2));
+			return (omar_palindrome((s + 1), i - 2));
 		}
 	}
 	else
