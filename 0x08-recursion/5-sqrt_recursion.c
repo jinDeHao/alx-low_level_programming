@@ -11,7 +11,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * i_need_this - function added
+ * omar_needs_this - function added
  * @n: the number
  * @s: root
  * Return: the natural square root of n
