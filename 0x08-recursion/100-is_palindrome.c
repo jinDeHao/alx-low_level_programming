@@ -43,6 +43,7 @@ int omar_palindrome(char *s, int i)
 	{
 		if (i <= 0)
 			return (1);
+
 		else
 		{
 			return (omar_palindrome((s + 1), i - 2));
