@@ -39,10 +39,6 @@ int _strlen_recursion(char *s)
  */
 int omar_palindrome(char *s, int i)
 {
-	if (i < 0)
-	{
-		return (0);
-	}
 	else if (*s == *(s + i))
 	{
 		if (i <= 0)
