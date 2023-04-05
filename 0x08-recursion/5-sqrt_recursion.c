@@ -19,7 +19,7 @@ int _sqrt_recursion(int n)
  */
 int i_need_this(int n, int s)
 {
-	if (s * s = n)
+	if (s * s == n)
 	{
 		return (s);
 	}
