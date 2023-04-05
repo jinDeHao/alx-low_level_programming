@@ -33,7 +33,7 @@ int _strlen_recursion(char *s)
 /**
  * omar_palindrome - if a string is a palindrome
  * @s: string
- * @a: difference
+ * @i: difference
  * Return: On success 1
  * other ways 0 returned
  */
@@ -45,7 +45,7 @@ int omar_palindrome(char *s, int i)
 	}
 	else if (*s == *(s + i))
 	{
-		if (i == 0)
+		if (i <= 0)
 			return (1);
 		else
 		{
