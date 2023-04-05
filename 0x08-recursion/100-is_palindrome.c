@@ -7,7 +7,7 @@
  */
 int is_palindrome(char *s)
 {
-	return (omar_palindrome(*s, _strlen_recursion(*s) - 2));
+	return (omar_palindrome(char *s, _strlen_recursion(char *s) - 2));
 }
 
 /**
