@@ -13,7 +13,7 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		return ((omar_prime_fun(n, n / 2));
+		return (omar_prime_fun(n, n - 1));
 	}
 }
 
@@ -38,5 +38,4 @@ int omar_prime_fun(int n, int s)
 	{
 		return (1);
 	}
-
 }
