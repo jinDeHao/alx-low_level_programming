@@ -59,13 +59,13 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printf("Error\n");
 			b = 1;
 			break;
 		}
 	}
 	if (b == 1)
 	{
+		printf("Error\n");
 		return (1);
 	}
 	else
