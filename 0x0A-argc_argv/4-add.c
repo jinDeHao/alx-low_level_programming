@@ -32,7 +32,7 @@ int _atoi(char *s)
 		i++;
 	}
 	if (f == 0)
-		return (12399);
+		return (0);
 
 	return (n);
 }
@@ -46,11 +46,14 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0, b = 0;
+	int i, c = 0, sum = 0, b = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (_atoi(argv[i]) != 12399)
+		if (*argv[i] < '0' || *argv[i] > '9')
+			c = 1;
+
+		if (c != 1)
 		{
 			sum += _atoi(argv[i]);
 		}
