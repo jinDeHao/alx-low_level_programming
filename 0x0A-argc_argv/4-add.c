@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 /**
  * main - Entry point
  * @argc: num of argu
@@ -11,12 +12,22 @@
 int main(int argc, char *argv[])
 {
 	int i, c = 0, sum = 0, b = 0;
+	unsigned int j;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] < '0' || *argv[i] > '9')
-			c = 1;
-
+		j = 0;
+		while(j < strlen(argv[i]))
+		{
+			if (!isdigit(*argv[i]))
+			{
+				c = 1;
+				break;
+			}
+			argv[i]++;
+			j++;
+		}
+		argv[i] -= j;
 		if (c != 1)
 		{
 			sum += atoi(argv[i]);
