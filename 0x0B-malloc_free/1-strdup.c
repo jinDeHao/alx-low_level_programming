@@ -22,7 +22,7 @@ char *_strdup(char *str)
 	if (buff == NULL)
 		return (NULL);
 
-	for (i = 0; i <= 3; i++)
+	for (i = 0; i <= l; i++)
 		buff[i] = str[i];
 
 	return (buff);
