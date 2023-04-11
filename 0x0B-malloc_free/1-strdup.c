@@ -18,9 +18,6 @@ char *_strdup(char *str)
 		str++;
 	}
 	str -= l;
-	if (l == 0)
-		return (0);
-
 	buff = malloc(l * sizeof(char));
 	for (i = 0; i <= l; i++)
 		buff[i] = str[i];
