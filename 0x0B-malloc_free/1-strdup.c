@@ -12,17 +12,14 @@ char *_strdup(char *str)
 	int i, l = 0;
 	char *buff;
 
-	while (*str >= '\0')
-	{
+	while (str[l] > '\0')
 		l++;
-		str++;
-	}
-	str -= l;
+	
 	if (l == 0 || str == NULL)
 		return (NULL);
 
 	buff = malloc(l * sizeof(char));
-	for (i = 0; i < l; i++)
+	for (i = 0; str[i]; i++)
 		buff[i] = str[i];
 
 	return (buff);
