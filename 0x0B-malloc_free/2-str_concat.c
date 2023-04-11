@@ -20,12 +20,12 @@ char *str_concat(char *s1, char *s2)
 		l++;
 
 	buff = malloc((l + j + 1) * sizeof(char));
-	if (*s1 != NULL)
+	if (s1 != NULL)
 	{
 		for (i = 0; i < j; i++)
 			buff[i] = s1[i];
 	}
-	if (*s2 != NULL)
+	if (s2 = NULL)
 	{
 		for (i = 0; i < l; i++)
 			buff[j + i] = s2[i];
