@@ -30,6 +30,9 @@ char *str_concat(char *s1, char *s2)
 		for (i = 0; i < l; i++)
 			buff[j + i] = s2[i];
 
+	if (buff == NULL)
+		return (NULL);
+
 	buff[j + l] = '\0';
 	return (buff);
 }
