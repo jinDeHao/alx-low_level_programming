@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	}
 	str -= l;
 	buff = malloc(l * sizeof(char));
-	for (i = 0; i <= l; i++)
+	for (i = 0; i < l; i++)
 		buff[i] = str[i];
 
 	return (buff);
