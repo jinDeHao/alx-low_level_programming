@@ -18,6 +18,9 @@ char *create_array(unsigned int size, char c)
 		return (0);
 
 	buff = malloc(size * sizeof(char));
+	if (buff == NULL)
+		return (NULL);
+
 	for (i = 0; i < size; i++)
 		buff[i] = c;
 
