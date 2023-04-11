@@ -10,9 +10,9 @@
 char **strtow(char *str)
 {
 	char **buff;
-	int i, j, len = 0, h = 0, w = 0, es = 0;
+	int i, len = 0, h = 0, w = 0, es = 0;
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == '')
 		return (NULL);
 
 	while (str[len] != '\0')
