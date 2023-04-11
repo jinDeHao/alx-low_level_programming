@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	int i, l = 0;
 	char *buff;
 
-	while (*str)
+	while (*str != '\0')
 	{
 		l++;
 		str++;
@@ -22,7 +22,7 @@ char *_strdup(char *str)
 		return (0);
 
 	buff = malloc(l * sizeof(char));
-	for (i = 0; i < l; i++)
+	for (i = 0; i <= l; i++)
 		buff[i] = str[i];
 
 	return (buff);
