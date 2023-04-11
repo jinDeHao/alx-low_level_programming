@@ -12,7 +12,7 @@ char **strtow(char *str)
 	char **buff;
 	int i, len = 0, h = 0, w = 0, es = 0;
 
-	if (str == NULL || *str == '')
+	if (str == NULL || *str == '\0')
 		return (NULL);
 
 	while (str[len] != '\0')
