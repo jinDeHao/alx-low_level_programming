@@ -35,13 +35,14 @@ int num_of_words(char *s)
 char **strtow(char *str)
 {
 	char **buff, *ffub;
-	int i, len = 0, h, w = 0, es = 0, be;
+	int i, len = 0, h, w = 0, es = 0, be, en;
+
+	while (*(str + len))
+		len++;
 
 	h = num_of_words(str);
 	if (h == 0)
 		return (NULL);
-	while (*(str + len))
-		len++;
 
 	buff = (char **) malloc((h + 1) * sizeof(char *));
 	if (buff == NULL)
@@ -53,10 +54,11 @@ char **strtow(char *str)
 		{
 			if (w)
 			{
+				en = i;
 				ffub = (char *) malloc(sizeof(char) * (w + 1));
 				if (ffub == NULL)
 					return (NULL);
-				while (be < i)
+				while (be < en)
 					*ffub++ = str[be++];
 				*ffub = '\0';
 				buff[es] = ffub - w;
