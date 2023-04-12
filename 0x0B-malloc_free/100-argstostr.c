@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 			g++;
 		}
 		buff[g] = '\n';
-		g++
+		g++;
 	}
 	return (buff);
 }
