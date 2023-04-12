@@ -10,28 +10,12 @@
 char **strtow(char *str)
 {
 	char **buff;
-	int i, len = 0, h = 0, w = 0, es = 0;
+	int i, len = 0, h = num_of_words(str), w = 0, es = 0;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	while (str[len] != '\0')
-	{
-		if (str[len] != ' ')
-		{	
-			if (str[len - 1] == ' ')
-			{	
-				h++;
-				es = 1;
-			}
-			if (es != 1 &&
-			(str[len + 1] == ' ' || str[len + 1] == '\0'))
-				h++;
-		}
-		len++;
-	}
-	len = 0;
-	buff = malloc(h * sizeof(char *));
+	buff = malloc((h + 1) * sizeof(char *));
 	if (buff == NULL)
 		return (NULL);
 
@@ -81,4 +65,29 @@ char **strtow(char *str)
 			*buff[i] = '\0';
 	}
 	return (buff);
+}
+
+/**
+ * num_of_words - count number of words
+ * @str: the string
+ * Return: n
+ */
+int num_of_words(char *str)
+{
+	int a, b = 0, n = 0;
+
+	for (a = 0; str[a] != '\0'; a++)
+	{
+		if (str[a] == ' ')
+			b = 0;
+		else
+		{
+			if (b == 0)
+			{
+				b = 1;
+				n++;
+			}
+		}
+	}
+	return (n);
 }
