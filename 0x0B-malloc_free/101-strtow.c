@@ -69,7 +69,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 	}
-	for (i = 0; i <= h; i++)
+	for (i = 0; i < h; i++)
 	{
 		es = 0;
 		while (*str != '\0')
@@ -87,7 +87,7 @@ char **strtow(char *str)
 			}
 			str++;
 		}
-		if (i == h)
+		if (i == h - 1)
 			*buff[i] = '\0';
 	}
 	return (buff);
