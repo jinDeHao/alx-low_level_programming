@@ -23,6 +23,7 @@ int num_of_words(char *s)
 			}
 		}
 	}
+	return (n);
 }
 
 /**
