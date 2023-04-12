@@ -18,7 +18,7 @@ int num_of_words(char *s)
 		{
 			if (b == 0)
 			{
-				b == 1;
+				b = 1;
 				n++;
 			}
 		}
@@ -89,4 +89,5 @@ char **strtow(char *str)
 		if (i == h - 1)
 			*buff[i] = '\0';
 	}
+	return (buff);
 }
