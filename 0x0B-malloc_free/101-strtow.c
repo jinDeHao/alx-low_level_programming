@@ -10,8 +10,9 @@
 char **strtow(char *str)
 {
 	char **buff;
-	int i, len = 0, h = num_of_words(str), w = 0, es = 0;
+	int i, len = 0, h, w = 0, es = 0;
 
+	h = num_of_words(str);
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
