@@ -70,16 +70,16 @@ char **strtow(char *str)
 
 /**
  * num_of_words - count number of words
- * @str: the string
+ * @s: the string
  * Return: n
  */
-int num_of_words(char *str)
+int num_of_words(char *s)
 {
 	int a, b = 0, n = 0;
 
-	for (a = 0; str[a] != '\0'; a++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (str[a] == ' ')
+		if (s[a] == ' ')
 			b = 0;
 		else
 		{
