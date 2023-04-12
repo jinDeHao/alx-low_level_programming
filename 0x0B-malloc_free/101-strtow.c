@@ -35,7 +35,7 @@ int num_of_words(char *s)
 char **strtow(char *str)
 {
 	char **buff, *ffub;
-	int i, len = 0, h, w = 0, es = 0, be, fi;
+	int i, len = 0, h, w = 0, es = 0, be;
 
 	h = num_of_words(str);
 	if (str == NULL || *str == '\0' || h == 0)
