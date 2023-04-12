@@ -29,7 +29,7 @@ int num_of_words(char *s)
 /**
  * strtow - splits a string into words
  * @str: string
- * Return buff
+ * Return: buff
  * on error NULL returned
  */
 char **strtow(char *str)
@@ -38,9 +38,9 @@ char **strtow(char *str)
 	int i, len = 0, h, w = 0, es = 0, be;
 
 	h = num_of_words(str);
-	if (str == NULL || *str == '\0' || h == 0)
+	if (h == 0)
 		return (NULL);
-	while(*(str + len))
+	while (*(str + len))
 		len++;
 
 	buff = (char **) malloc((h + 1) * sizeof(char *));
