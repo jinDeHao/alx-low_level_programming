@@ -41,14 +41,14 @@ char **strtow(char *str)
 		len++;
 
 	h = num_of_words(str);
-	if (h == 0)
+	if (h == 0 || *str == '\0')
 		return (NULL);
 
 	buff = (char **) malloc((h + 1) * sizeof(char *));
 	if (buff == NULL)
 		return (NULL);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
