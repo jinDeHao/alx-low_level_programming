@@ -34,61 +34,39 @@ int num_of_words(char *s)
  */
 char **strtow(char *str)
 {
-	char **buff;
-	int i, len = 0, h, w = 0, es = 0;
+	char **buff, *ffub;
+	int i, len = 0, h, w = 0, es = 0, be, fi;
 
 	h = num_of_words(str);
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || h == 0)
 		return (NULL);
+	while(*(str + len))
+		len++;
 
-	buff = malloc((h + 1) * sizeof(char *));
+	buff = (char **) malloc((h + 1) * sizeof(char *));
 	if (buff == NULL)
 		return (NULL);
 
-	for (i = 0; i < h; i++)
+	for (i = 0; i < len; i++)
 	{
-		w = 0;
-		es = 0;
-		while (str[len] != '\0')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (str[len] != ' ')
+			if (w)
 			{
-				w++;
-				es = 1;
+				ffub = (char *) malloc(sizeof(char) * (w + 1));
+				if (ffub == NULL)
+					return (NULL);
+				while (be < i)
+					*ffub++ = str[be++];
+				*ffub = '\0';
+				buff[es] = ffub - w;
+				es++;
+				w = 0;
 			}
-			if (str[len] == ' ' && es == 1)
-				break;
-			len++;
 		}
-		buff[i] = malloc((w + 1) * sizeof(char));
-		if (buff[i] == NULL)
-		{
-			for (; i >= 0; i--)
-				free(buff[i]);
-			free(buff);
-			return (NULL);
-		}
+		else if (w++ == 0)
+			be = i;
 	}
-	for (i = 0; i < h; i++)
-	{
-		es = 0;
-		while (*str != '\0')
-		{	
-			if (*str != ' ')
-			{
-				*buff[i] = *str;
-				es = 1;
-				buff[i]++;
-			}
-			if (*str == ' ' && es == 1)
-			{
-				*buff[i] = '\0';
-				break;
-			}
-			str++;
-		}
-		if (i == h - 1)
-			*buff[i] = '\0';
-	}
+	buff[es] = NULL;
 	return (buff);
 }
