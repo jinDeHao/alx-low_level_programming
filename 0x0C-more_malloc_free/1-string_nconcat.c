@@ -18,10 +18,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l1++;
 	while (s2[l2] && s1)
 		l2++;
-	while (s < l1 + l2)
+	while (s < l1 + l2 && s < l1 + n)
 	{
-		if (s >= l1 + n)
-			break;
 		s++;
 	}
 	buff = malloc(sizeof(char) * (s + 1));
