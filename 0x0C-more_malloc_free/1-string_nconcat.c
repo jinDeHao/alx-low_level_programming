@@ -18,8 +18,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l1++;
 	while (s2[l2])
 		l2++;
-	l1--;
-	l2--;
 	while (s < l1 + l2)
 	{
 		if (s >= l1 + n)
