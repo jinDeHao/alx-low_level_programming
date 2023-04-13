@@ -14,40 +14,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *buff;
 	unsigned int l1 = 0, l2 = 0, s = 0, i;
 
-	if (s1 == NULL || s2 == NULL)
+	while (s1[l1] != '\0')
+		l1++;
+	while (s2[l2] != '\0')
+		l2++;
+	while (s < l1 + l2)
 	{
-		buff = malloc(1);
-		if (buff == NULL)
-			return (NULL);
-		*buff = '\0';
+		if (s >= l1 + n)
+			break;
+		s++;
 	}
-	else
+	buff = malloc(sizeof(char) * (s + 1));
+	if (buff == NULL)
+		return (NULL);
+	for (i = 0; i <= s; i++)
 	{
-		while (s1[l1] != '\0')
-			l1++;
-		while (s2[l2] != '\0')
-			l2++;
-		while (s < l1 + l2)
+		if (i < l1)
 		{
-			if (s >= l1 + n)
-				break;
-			s++;
+			buff[i] = *s1;
+			s1++;
 		}
-		buff = malloc(sizeof(char) * (s + 1));
-		if (buff == NULL)
-			return (NULL);
-		for (i = 0; i <= s; i++)
+		else
 		{
-			if (i < l1)
-			{
-				buff[i] = *s1;
-				s1++;
-			}
-			else
-			{
-				buff[i] = *s2;
-				s2++;
-			}
+			buff[i] = *s2;
+			s2++;
 		}
 	}
 	return (buff);
