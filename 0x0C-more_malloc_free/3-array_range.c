@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	buff = malloc(sizeof(int) * (max - min + 1));
 	if (buff == NULL)
 		return (NULL);
-	for (i = 0; i <= max - min; i++)
+	for (i = 0; min <= max; i++)
 		buff[i] = min++;
 	return (buff);
 }
