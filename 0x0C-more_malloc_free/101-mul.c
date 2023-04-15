@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 			a = 1;
 		if (a == 1)
 			_putchar(res[i] + 48);
-		
+
 	}
 	if (a == 0)
 		_putchar(48);
