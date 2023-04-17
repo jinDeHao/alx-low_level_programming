@@ -32,13 +32,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	buff_dog = malloc(sizeof(dog_t));
 	if (buff_dog == NULL)
 		return (NULL);
-	buff_dog->name = malloc(sizeof(name));
+	buff_dog->name = malloc(sizeof(*name));
 	if (buff_dog->name == NULL)
 	{
 		free(buff_dog);
 		return (NULL);
 	}
-	buff_dog->owner = malloc(sizeof(owner));
+	buff_dog->owner = malloc(sizeof(*owner));
 	if (buff_dog->owner == NULL)
 	{
 		free(buff_dog);
