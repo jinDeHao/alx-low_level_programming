@@ -2,6 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * _strcpy - copy the string to the buffer.
+ * @src: The pointer
+ * @dest: The pointer
+ * Return: On success dest.
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int l, i;
+
+	l = 0;
+	while (src[l] != '\0')
+		l++;
+	for (i = 0; i <= l; i++)
+		dest[i] = src[i];
+	return (dest);
+}
+/**
  * new_dog - creates a new dog
  * @name: dog's name
  * @age: dog's age
@@ -11,11 +28,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *buff_dog;
 
-	buff_dog = malloc(sizeof(name) + sizeof(age) + sizeof(owner));
+	buff_dog = malloc(sizeof(dog_t));
 	if (buff_dog == NULL)
 		return (NULL);
-	buff_dog->name = name;
+	buff_dog->name = malloc(sizeof(name));
+	if (buff_dog->name == NULL)
+		return (NULL);
+	buff_dog->owner = malloc(sizeof(owner));
+	if (buff_dog->owner == NULL)
+		return (NULL);
+	_strcpy(buff_dog->name, name);
+	_strcpy(buff_dog->owner, owner);
 	buff_dog->age = age;
-	buff_dog->owner = owner;
 	return (buff_dog);
 }
