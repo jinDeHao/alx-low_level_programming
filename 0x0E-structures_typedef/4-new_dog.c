@@ -28,22 +28,22 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *buff_dog;
-	int l-name = 0, l-owner = 0;
+	int l_name = 0, l_owner = 0;
 
-	while (name[l-name] != '\0')
-		l-name++;
-	while (owner[l-owner] != '\0')
-		l-owner++;
+	while (name[l_name] != '\0')
+		l_name++;
+	while (owner[l_owner] != '\0')
+		l_owner++;
 	buff_dog = malloc(sizeof(dog_t));
 	if (buff_dog == NULL)
 		return (NULL);
-	buff_dog->name = malloc(l-name + 1);
+	buff_dog->name = malloc(l_name + 1);
 	if (buff_dog->name == NULL)
 	{
 		free(buff_dog);
 		return (NULL);
 	}
-	buff_dog->owner = malloc(l-owner + 1);
+	buff_dog->owner = malloc(l_owner + 1);
 	if (buff_dog->owner == NULL)
 	{
 		free(buff_dog);
