@@ -1,5 +1,10 @@
 #include "3-calc.h"
 #include <stdlib.h>
+/**
+ * get_op_func - link the main fun with the operation fun
+ * @s: operation
+ * Return: the result of the operation
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
