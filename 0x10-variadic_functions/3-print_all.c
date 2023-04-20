@@ -33,6 +33,8 @@ void print_all(const char * const format, ...)
 			case 'i':
 				printf("%s%d", separator, va_arg(args, int));
 				break;
+			default:
+				i++;
 		}
 		separator =", ";
 		i++;
