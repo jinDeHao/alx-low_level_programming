@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - prints the opcodes 
+ * main - prints the opcodes
  * @argc: number of arg
  * @argv: pointer to array of strings
  * Return: Always 0
