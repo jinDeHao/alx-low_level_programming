@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	if (format != NULL)
 	{
-		while (format[i] != '\0')
+		while (format[i])
 		{
 			switch (format[i])
 			{
@@ -35,6 +35,9 @@ void print_all(const char * const format, ...)
 				case 'i':
 					printf("%s%d", separator, va_arg(args, int));
 					break;
+				default:
+					i++;
+					continue;
 			}
 			separator =", ";
 			i++;
