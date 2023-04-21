@@ -22,9 +22,8 @@ void print_all(const char * const format, ...)
 					str = va_arg(args, char*);
 					printf("%s", separator);
 					if (str == NULL)
-						printf("(nil)");
-					else
-						printf("%s", str);
+						str = "(nil)";
+					printf("%s", str);
 					break;
 				case 'c':
 					printf("%s%c", separator, va_arg(args, int));
