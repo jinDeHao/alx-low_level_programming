@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	char *separator = "", *str;
 
 	va_start(args, format);
-	if (format)
+	if (format != NULL)
 	{
 		while (format[i])
 		{
@@ -42,6 +42,6 @@ void print_all(const char * const format, ...)
 			i++;
 		}
 	}
-	va_end(args);
 	printf("\n");
+	va_end(args);
 }
