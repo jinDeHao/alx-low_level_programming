@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "lists.h"
+void first_of_all(void) __attribute__ ((constructor));
 /**
  * first_of_all - Entry point
  * Return: 0
