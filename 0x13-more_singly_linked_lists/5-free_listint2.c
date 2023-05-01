@@ -9,6 +9,13 @@
  */
 void free_listint2(listint_t **head)
 {
-	free_listint(*head);
+	listint_t *current, *use = *head;
+
+	while (use)
+	{
+		current = use->next;
+		free(use);
+		use = current;
+	}
 	free(head);
 }
