@@ -18,5 +18,5 @@ void free_listint2(listint_t **head)
 		free(use);
 		use = current;
 	}
-	head = use;
+	*head = use;
 }
