@@ -20,6 +20,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		del = use;
 		use = use->next;
 	}
+	if (use == NULL)
+		return (-1);
 	if (index != 0)
 		del->next = use->next;
 	else
