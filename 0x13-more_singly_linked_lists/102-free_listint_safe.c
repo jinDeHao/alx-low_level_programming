@@ -22,10 +22,13 @@ size_t free_listint_safe(listint_t **h)
 			size++;
 			break;
 		}
-		to_free = (*h)->next;
-		free(*h);
-		*h = to_free;
-		size++;
+		else
+		{
+			to_free = (*h)->next;
+			free(*h);
+			*h = to_free;
+			size++;
+		}
 	}
 	return (size);
 }
