@@ -10,21 +10,21 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t size = 0;
-	listint_t *use = *h, *to_free;
+	listint_t *to_free;
 
-	if (use == NULL || h == NULL)
+	if (*h == NULL)
 		return (0);
-	while (use)
+	while (*h)
 	{
-		if (use <= use->next)
+		if (*h <= (*h)->next)
 		{
-			free(use);
+			free(*h);
 			size++;
 			break;
 		}
-		to_free = use->next;
-		free(use);
-		use = to_free;
+		to_free = (*h)->next;
+		free(*h);
+		*h = to_free;
 		size++;
 	}
 	return (size);
