@@ -5,7 +5,7 @@
 /**
  * reverse_listint -  reverses alinked list.
  * @head: point to pointer which point to linked list.
- * Returns: the address of the list
+ * Return: the address of the list
  */
 listint_t *reverse_listint(listint_t **head)
 {
