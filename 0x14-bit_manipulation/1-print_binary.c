@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 			_putchar(49);
 			c++;
 		}
-		if (c & !(m & 1))
+		else if (c)
 			_putchar(48);
 		i--;
 	}
