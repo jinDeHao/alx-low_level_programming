@@ -1,6 +1,6 @@
 #include "main.h"
-#include <fcntl.h>
-#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 /**
  * read_textfile - reads a text file and prints it.
  * @filename: yes, it's a file name
@@ -16,11 +16,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename)
 		return (0);
-	fd = open(*filename, O_RDONLY);
+	buff = malloc(letters);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
 	read(fd, buff, letters);
 	close(fd);
 	num_of_letters = write(1, buff, letters);
+	free(buff);
 	return (num_of_letters);
 }
