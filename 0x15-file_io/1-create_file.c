@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
+#include <string.h>
 /**
  * create_file - creates a file.
  * @filename: yes, you'r right
