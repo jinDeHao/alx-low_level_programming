@@ -7,7 +7,7 @@ char *mall_error(char *to_file);
  * main - Entry point
  * @argc: num of argument
  * @argv: pointer to array of strings
- * Return: Always 1 (on Success)
+ * Return: Always 0 (on Success)
  */
 int main(int argc, char *argv[])
 {
@@ -17,12 +17,12 @@ int main(int argc, char *argv[])
 	arg_error(argc);
 	buff = mall_error(argv[2]);
 	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
+	size_read = read(fd, buff, 1024);
+	if (fd == -1 || size_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	size_read = read(fd, buff, 1024);
 	er = close(fd);
 	if (er == -1)
 	{
@@ -39,12 +39,14 @@ int main(int argc, char *argv[])
 	if (er == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		free(buff);
 		exit(99);
 	}
 	er = close(fd);
 	if (er == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		free(buff);
 		exit(100);
 	}
 	free(buff);
