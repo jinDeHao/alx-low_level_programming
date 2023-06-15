@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - add node at first
+ * add_dnodeint - add node at first
  * @head: pinter to address of head of list
  * @n: the value of the elment
  * Return: the head of list
