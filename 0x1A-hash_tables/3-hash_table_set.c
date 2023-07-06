@@ -11,7 +11,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx, i = 0;
 
-	if (!value || !key || *key == '\0')
+	if (!ht || !value || !key || *key == '\0')
 		return (0);
 	while (ht->array[i])
 	{
