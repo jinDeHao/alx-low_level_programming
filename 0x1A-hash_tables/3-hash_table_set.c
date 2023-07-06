@@ -19,6 +19,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         {
             free(ht->array[i]->value);
             ht->array[i]->value = strdup(value);
+			if (ht->array[i]->value == NULL)
+				return (0);
             return (1);
         }
         i++;
@@ -44,7 +46,18 @@ hash_node_t *add_node_hash(hash_node_t **head, char *key, char *value)
 	if (!new_hash)
 		return (NULL);
 	new_hash->key = strdup(key);
+	if (!new_hash->key)
+	{
+		free(new_hash);
+		return (NULL);
+	}
 	new_hash->value = strdup(value);
+	if (!new_hash->value)
+	{
+		free(new_hash);
+		free(new_hash->key);
+		return (NULL);
+	}
 	new_hash->next = *head;
 	*head = new_hash;
 	return (*head);
