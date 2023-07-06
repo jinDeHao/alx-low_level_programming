@@ -29,13 +29,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 hash_node_t *add_node_hash(hash_node_t **head, char *key, char *value)
 {
 	hash_node_t *new_hash;
-
-	if ((*head)->key && !strcmp((*head)->key, key))
-	{
-		free((*head)->value);
-		(*head)->value = strdup(value);
-		return (*head);
-	}
+/**
+*	if ((*head)->key && !strcmp((*head)->key, key))
+*	{
+*		free((*head)->value);
+*		(*head)->value = strdup(value);
+*		return (*head);
+*	}
+*/
 	new_hash = malloc(sizeof(hash_node_t));
 	if (!new_hash)
 		return (NULL);
