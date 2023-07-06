@@ -13,6 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !value || !key || *key == '\0')
 		return (0);
+	idx = key_index((const unsigned char *)key, ht->size);
+	i = idx;
 	while (ht->array[i])
 	{
 		if (strcmp(ht->array[i]->key, key) == 0)
@@ -23,7 +25,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		i++;
 	}
-	idx = key_index((const unsigned char *)key, ht->size);
 	if (add_node_hash(&(ht->array[idx]), (char *)key, (char *)value))
 		return (1);
 	return (0);
