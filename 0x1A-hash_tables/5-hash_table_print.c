@@ -10,6 +10,7 @@ int check_hash_table(hash_node_t **hash, unsigned long int size);
 void hash_table_print(const hash_table_t *ht)
 {
 	int i = 0, check, prchick = 0;
+	hash_node_t *set;
 
 	if (!ht)
 		return;
@@ -17,13 +18,14 @@ void hash_table_print(const hash_table_t *ht)
 	fprintf(stdout, "{");
 	while (i < (int)ht->size)
 	{
-		while (ht->array[i])
+		set = ht->array[i];
+		while (set)
 		{
-			fprintf(stdout, "'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
+			fprintf(stdout, "'%s': '%s'", set->key, set->value);
 			prchick++;
 			if (prchick != check)
 				fprintf(stdout, ", ");
-			ht->array[i] = ht->array[i]->next;
+			set = set->next;
 		}
 		i++;
 	}
