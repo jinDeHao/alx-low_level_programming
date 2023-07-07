@@ -27,6 +27,12 @@ void hash_table_print(const hash_table_t *ht)
 	fprintf(stdout, "}\n");
 }
 
+/**
+ * check_hash_table - check the dictionary of hash table
+ * @hash: the array
+ * @size: size of array
+ * Return: the number of elements
+*/
 int check_hash_table(hash_node_t **hash, unsigned long int size)
 {
 	int check = 0, i = 0;
