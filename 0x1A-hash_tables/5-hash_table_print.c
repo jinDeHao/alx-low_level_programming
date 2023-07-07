@@ -9,10 +9,11 @@ int check_hash_table(hash_node_t **hash, unsigned long int size);
 */
 void hash_table_print(const hash_table_t *ht)
 {
-	int i = 0, check = check_hash_table(ht->array, ht->size), prchick = 0;
+	int i = 0, check, prchick = 0;
 
 	if (!ht)
 		return;
+	check = check_hash_table(ht->array, ht->size);
 	fprintf(stdout, "{");
 	while (i < (int)ht->size)
 	{
