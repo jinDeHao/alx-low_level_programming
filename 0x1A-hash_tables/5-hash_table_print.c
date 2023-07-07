@@ -10,8 +10,10 @@ void hash_table_print(const hash_table_t *ht)
 	int i = 0;
 	char *separator = "";
 
+	if (!ht)
+		return;
 	fprintf(stdout ,"{");
-	while (ht && i < (int)ht->size)
+	while (i < (int)ht->size)
 	{
 		while (ht->array[i])
 		{
