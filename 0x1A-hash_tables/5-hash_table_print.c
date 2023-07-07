@@ -11,10 +11,10 @@ void hash_table_print(const hash_table_t *ht)
 {
 	int i = 0, check = check_hash_table(ht->array, ht->size), prchick = 0;
 
-	if (!ht && 1)
+	if (!ht)
 		return;
 	fprintf(stdout, "{");
-	while (ht && i < (int)ht->size)
+	while (i < (int)ht->size)
 	{
 		while (ht->array[i])
 		{
