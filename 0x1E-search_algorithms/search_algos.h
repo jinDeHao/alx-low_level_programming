@@ -15,4 +15,6 @@ int jump_search(int *array, size_t size, int value);
 int interpolation_search(int *array, size_t size, int value);
 size_t prob(int *array, int value, size_t low, size_t high);
 
+int exponential_search(int *array, size_t size, int value);
+
 #endif
